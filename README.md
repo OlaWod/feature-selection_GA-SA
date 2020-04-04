@@ -2,8 +2,8 @@
 Use Genetic Algorithm and Simulate Anneal for feature selection. 用遗传算法/模拟退火算法进行特征选择.
 
 ## Description
-GA_feature_selection.py：遗传算法进行特征选择
-SA_feature_selection.py：模拟退火算法进行特征选择
+GA_feature_selection.py：遗传算法进行特征选择</br>
+SA_feature_selection.py：模拟退火算法进行特征选择</br>
 without_selection.py：未进行特征选择，用原始数据进行分类
 
 ## Output
