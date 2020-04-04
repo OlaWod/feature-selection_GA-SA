@@ -17,3 +17,7 @@ score = 0.6257839721254356
 ### 3.SA_feature_selection.py
 
 ![](https://github.com/OlaWod/feature-selection_GA-SA/blob/master/sample_output/sample_output_SA.JPG)
+
+------
+The dataset comes from here:https://github.com/Fangzhenxuan/AI_Projects/tree/master/Pattern%20Recognition/GA
+GA_feature_selection was written with a lot of reference from here:https://github.com/cainsmile/GA_for_Feature_Selection
