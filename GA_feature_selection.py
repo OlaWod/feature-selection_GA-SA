@@ -1,25 +1,9 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import random
 from sklearn import tree
 from sklearn.model_selection import cross_val_score
-from sklearn.feature_extraction.text import CountVectorizer
-'''
-train_data = pd.read_csv('train.tsv', sep='\t')  # 训练集
-test_data = pd.read_csv('test.tsv', sep='\t')   # 测试集
 
-corpus_train = train_data['Phrase']   # 语料库
-corpus_test = test_data['Phrase']   # 语料库
-
-vectorizer = CountVectorizer(ngram_range=(1,3), max_features = 150000) # N元特征
-vectorizer.fit(pd.concat([corpus_train,corpus_test]))
-
-X = vectorizer.transform(corpus_train)    # 向量化
-#X_test = vectorizer.transform(corpus_test)    # 向量化
-
-y = list(train_data['Sentiment'])
-'''
 data = pd.read_csv('./dataset/sonar.all-data',header=None,sep=',')
 print(data.head())
 X = data.iloc[:,:-1]
@@ -176,7 +160,7 @@ if __name__=='__main__':
 
         print([i, best_chrom, best_fitness])
         
-        px.append(i)
+        px.append(i)    # 画图
         py.append(best_fitness)
         plt.plot(px,py)
         plt.show()

@@ -112,7 +112,7 @@ if __name__=='__main__':
         print(x_old)
         print(E_old)
 
-        px.append(tmp)
+        px.append(tmp)  # 画图
         py_old.append(E_old)
         py_new.append(E_new)
         plt.plot(px,py_old,'r')
