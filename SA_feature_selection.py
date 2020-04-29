@@ -26,13 +26,17 @@ k = 0.002
 
 # 是否可采纳
 def is_acceptable(delta_E,tmp):     
-    if delta_E<0:   # ΔE<0，直接采纳
+    if delta_E<=0:   # ΔE<=0，直接采纳
+        print('直接采纳')
         return True
 
     p=math.exp(-delta_E/(k*tmp))    # 求采纳概率
-    if random.random()<p:
+    r=random.random()
+    if r<p:
+        print(str(r)+"<"+str(p)+"，可采纳") 
         return True
     else:
+        print(str(r)+">="+str(p)+"，不采纳"+"（"+str(counter)+"）")
         return False
 
 # 特征编码
@@ -101,16 +105,18 @@ if __name__=='__main__':
             x_old = x_new
             E_old = E_new
 
-        if delta_E<0:   # ΔE<0，降温
+        if delta_E<=0:   # ΔE<=0，降温
             tmp = tmp * alpha
         else:
-            counter += 1
+            counter -= 1
 
         if counter < 0:
             break
 
+        print(tmp)
         print(x_old)
         print(E_old)
+        print()
 
         px.append(tmp)  # 画图
         py_old.append(E_old)
